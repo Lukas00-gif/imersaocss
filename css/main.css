@@ -1,44 +1,74 @@
-body
-{
-  background: gray;
-  font-family: Arial;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a
-{
-  color: teal;
-  text-decoration: none;
+body {
+  background-image: url('../img/fundo.jpg');
+  background-size: auto 100vh;
+  height: 100vh;
 }
 
-a: hover
-{
-  text-decoration: none;
+ /* se a tela for maior do que 400px vai entrar nessa condição */
+@media (min-width: 400px) { /* condição */
+  body {
+    font-size: 18px;
+  }
 }
 
-.menu
-{
-  background: white;
+/* se a tela for maior do que 600px vai entrar nessa condição */
+@media (min-width: 600px) {
+  body {
+    font-size: 22px;
+  }
 }
 
-.menu ul
-{
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.menu ul {
   display: flex;
   justify-content: space-around;
 }
 
-.menu li
-{
+.menu li {
   list-style: none;
 }
 
-.site-subtitle,
-.site-title
-{
+.menu a {
+  color: teal;
+  display: block; /* emcima fica em bloco e empurra pra baixo */
+  padding: 10px;
+  text-decoration: none;
+}
+
+.site-title {
   color: whitesmoke;
   text-align: center;
 }
 
-.site-subtitle
-{
+.site-subtitle {
+  color: silver;
   font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
 }
