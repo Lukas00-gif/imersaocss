@@ -8,6 +8,7 @@ body {
   background-image: url('../img/fundo.jpg');
   background-size: auto 100vh;
   height: 100vh;
+  font-family: 'Roboto Mono', monospace;
 }
 
  /* se a tela for maior do que 400px vai entrar nessa condição */
@@ -58,17 +59,84 @@ header {
 .site-title {
   color: whitesmoke;
   text-align: center;
+  font-family: 'Baloo 2', cursive;
 }
 
 .site-subtitle {
   color: silver;
-  font-style: italic;
+ /* font-style: italic;
   font-weight: lighter;
-  text-align: center;
+  text-align: center; */
   font-size: 2em;
+  font-family: 'Baloo 2', cursive;
+}
+
+.portifolio
+{
+  padding: 1.2em;
+}
+
+.portifolio .grid
+{
+  display: grid;
+  gap: 2em; /* para forma uma coluna */
+}
+
+/* se a tela for maior do que 544px a coluna dentro do grid vai ficar duas colunas */
+@media (min-width: 580px)
+{
+  .portifolio .grid
+  {
+    grid-template-columns: 240px 240px; /* serve para criar colunas, no caso aki e duas colunas de 240px*/
+  }
+}
+
+@media (min-width: 660px)
+{
+  .portifolio .grid
+  {
+    grid-template-columns: 240px 240px; /* serve para criar colunas, no caso aki e duas colunas de 240px*/
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 760px)
+{
+  .portifolio .grid
+  {
+    grid-template-columns: 240px 240px; /* serve para criar colunas, no caso aki e duas colunas de 240px*/
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+/* se a tela for maior do que 780px a coluna dentro do grid vai ficar tres colunas */
+@media (min-width: 845px)
+{
+  .portifolio .grid
+  {
+    grid-template-columns: repeat(3,240px); /* serve para criar colunas, no caso aki e tres colunas de 240px*/
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.portifolio figure
+{
+  text-align: center; /* deixa tudo dentro do figure centralizado */
+}
+
+.portifolio h2{
+  font-family: 'Roboto Mono', monospace;
+  color: whitesmoke;
+  margin-bottom: 1.3em;
 }
 
 .img-portfolio {
-  height: 180px;
-  width: 180px;
+  height: 200px;
+  width: 240px;
+  object-fit: cover; /* serve para melhorar a visualização */
 }
+
+
