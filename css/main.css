@@ -38,6 +38,7 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
 
 .menu ul {
@@ -50,10 +51,33 @@ header {
 }
 
 .menu a {
-  color: teal;
-  display: block; /* emcima fica em bloco e empurra pra baixo */
-  padding: 10px;
-  text-decoration: none;
+   color: teal;
+   display: block; /* emcima fica em bloco e empurra pra baixo */
+   transition: background-color 1s, color 1s;
+   text-decoration: none; 
+   padding: 12px;
+}
+
+.menu a:hover /* faz trocar a transição de cor */
+{
+  background-color: rgb(7, 201, 191) ;
+  color: white;
+}
+
+.titulo /* animação no titulo */
+{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards; /* a animaçao vai para frente e depois para */
+}
+
+@keyframes animacaoTitulo /* criando a animaçao chamada animaçaotitulo */
+{
+  100%
+  {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 .site-title {
@@ -69,6 +93,12 @@ header {
   text-align: center; */
   font-size: 2em;
   font-family: 'Baloo 2', cursive;
+}
+
+.contato, .portifolio
+{
+  padding: 2em;
+  min-height: 100vh;
 }
 
 .portifolio
@@ -137,6 +167,33 @@ header {
   height: 200px;
   width: 240px;
   object-fit: cover; /* serve para melhorar a visualização */
+  transition: transform 500ms; 
 }
 
+.img-portfolio:hover
+{
+  transform: scale(1.2);
+}
+
+.contato h2
+{
+  color: whitesmoke;
+}
+
+.contato a
+{
+  color: white;
+  font-size: 4.5em;
+  text-decoration: none;
+}
+
+.contato a :hover
+{
+  text-shadow: 0px 0px 10px rgba(255,255,255, 1);
+}
+
+.contato .icons
+{
+  text-align: center;
+}
 
