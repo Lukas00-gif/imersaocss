@@ -62,6 +62,7 @@ header {
 {
   background-color: rgb(7, 201, 191) ;
   color: white;
+  text-decoration: underline;
 }
 
 .titulo /* animação no titulo */
@@ -95,10 +96,21 @@ header {
   font-family: 'Baloo 2', cursive;
 }
 
-.contato, .portifolio
+.contato, .portifolio, .sobre
 {
   padding: 2em;
-  min-height: 100vh;
+  min-height: 35vh; /* tamanho dos containers */
+}
+
+@media (min-width: 1200px) /* cria uma barreira ate 1200px  */
+{
+  .container
+  {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 .portifolio
@@ -152,12 +164,37 @@ header {
   }
 }
 
+.sobre p
+{
+  color: white;
+  margin-bottom: 1.3em;
+  text-indent: 1.4em;
+  text-align: justify;
+}
+
+.sobre a
+{
+  color: cyan;
+  text-decoration: underline; /* sublinhado */
+}
+
+/*.sobre .avatar (deixa a foto de lado e o texto do outro)
+{
+  float: right;
+  margin-left: 2em;
+} *
+
+.sobre .avatar img (deixa redonda a foto do perfil)
+{
+  border-radius: 50%;
+} */
+
 .portifolio figure
 {
   text-align: center; /* deixa tudo dentro do figure centralizado */
 }
 
-.portifolio h2{
+.portifolio h2, .sobre h2{
   font-family: 'Roboto Mono', monospace;
   color: whitesmoke;
   margin-bottom: 1.3em;
@@ -165,7 +202,7 @@ header {
 
 .img-portfolio {
   height: 200px;
-  width: 240px;
+  width: 100%;
   object-fit: cover; /* serve para melhorar a visualização */
   transition: transform 500ms; 
 }
@@ -195,5 +232,19 @@ header {
 .contato .icons
 {
   text-align: center;
+}
+
+.final
+{
+  color:rgb(165, 199, 204);
+  background-color: rgb(14, 93, 105);
+}
+
+.footer  /* config para deixar lado a lado*/
+{
+  display: flex;
+  justify-content: space-around;
+  padding: 13px;
+  width: 33,30%;
 }
 

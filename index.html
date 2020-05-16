@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- meta taq para mobile-->
-    <title>Lukas Lima</title>
+    <title>Meu Portifolio - Lucas Lima</title>
     <link rel="stylesheet" href="css/main.css">
+    <!-- link das fontes-->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Indie+Flower&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/642fc03c14.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/642fc03c14.js" crossorigin="anonymous"></script> <!-- link dos icones-->
 </head>
 <body>
     <header>
         <nav class = "menu"> 
-          <ul>
-            <li><a href = "#sobre">Sobre</a></li>
+          <ul class="container">
+            <li><a href = "#sobree">Sobre</a></li>
             <li><a href = "#portfolio">Projetos</a></li>
             <li><a href = "#contatoo">Contato</a></li>
           </ul>
@@ -23,34 +24,68 @@
           <h2 class = "site-subtitle">email responsive</h2>
        </div>
         </header>
-        
-        <section class = 'portifolio' id="portfolio">
+
+        <section class="sobre container" id="sobree"> 
+          <h2>Sobre</h2>
+
+          <!-- <figure class="avatar"> (classe) FOTO DO PERFIL
+            <img src="" alt="Lucas Lima">
+          </figure> -->
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam voluptates ratione tenetur molestiae corporis deleniti doloremque! Debitis dignissimos architecto nemo facere perferendis ipsum, consequuntur illo distinctio, minima, exercitationem doloribus!
+          </p>
+          
+          <p>
+            Eveniet quia distinctio labore minus ex! Blanditiis animi veniam obcaecati numquam architecto quos assumenda magnam, maxime sapiente quaerat earum consequatur culpa dignissimos accusantium maiores error? Ex blanditiis sit debitis aspernatur.
+          </p>
+
+          <p>
+            Dolorum culpa aliquam vitae odio molestias aliquid exercitationem, aut dolorem harum sapiente omnis.
+            Quidem facere eos repellat odit repellendus necessitatibus nostrum ipsa est cum omnis cumque, totam, ea sint harum?
+            Sequi ea blanditiis minus laborum pariatur saepe, ex sed molestiae recusandae, tenetur autem voluptatum maiores excepturi iusto eos libero facere nisi cumque doloremque tempora temporibus! Id ab ea eum numquam.
+          </p>
+
+          <p>
+            Esse site foi criado durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS</a> da alura ;)
+          </p>
+         
+
+        </section>
+
+        <section class = 'portifolio container' id="portfolio">
           <h2>Projetos Pessoais</h2>
         <!-- divisao da grid conteiner = div-->
-          <div class="grid"> 
-            <figure>
+          <div class="grid">
+
+              <figure>
                 <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
                 <figcaption>eCommerce</figcaption>
               </figure>
+          
               <figure>
                 <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
                 <figcaption>Mobile</figcaption>
               </figure>
+            
               <figure>
                 <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
                 <figcaption>Web design</figcaption>
               </figure>
+
               <figure>
                 <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
                 <figcaption>Projetos pessoais</figcaption>
               </figure>
+
               <figure>
                 <img class="img-portfolio" src="img/html.png" alt="html">
                 <figcaption>Projetos em html</figcaption>
               </figure>
+
             </section>
             <!-- contato-->
-            <section class="contato" id="contatoo">
+            <section class="contato container" id="contatoo">
               <h2>Contato</h2>
 
               <div class="grid icons">
@@ -65,6 +100,13 @@
                   </a>
               </div>
             </section>
+          </div>
+
+          <div class="final">
+            <div class="footer">
+              <h5 class="font">Lucas Lima</h5>
+              <h5 class="ano">@2020</h5>
+            </div>
           </div>
 </body>
 </html>
